@@ -151,9 +151,9 @@
       if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
     });
 
-    // Close mobile menu if resized to desktop screens
+    // Close mobile menu if resized to desktop screens (> 1024px)
     on(window, 'resize', () => {
-      if (window.innerWidth > 900 && menu.classList.contains('is-open')) {
+      if (window.innerWidth > 1024 && menu.classList.contains('is-open')) {
         closeMenu();
       }
     });

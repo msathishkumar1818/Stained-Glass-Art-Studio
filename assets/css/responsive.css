@@ -10,11 +10,29 @@
   .footer-bottom { max-width: var(--site-container); }
 }
 
-/* ── Switch to mobile nav at ≤ 1024px ─────────────────────── */
+/* ── iPad Pro Landscape & Medium Desktops (≤ 1240px) ───────── */
+@media (max-width: 1240px) {
+  /* The 5-Stage Commission Journey: prevent narrow vertical strip squishing */
+  .comm-process-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .comm-process-grid::before {
+    display: none;
+  }
+
+  /* Authentic Materials: prevent 4 narrow columns */
+  .h2-materials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* ── Switch to mobile nav at ≤ 1024px (iPad Pro Portrait & Tablets) ─── */
 @media (max-width: 1024px) {
-  .desktop-nav { display: none; }
-  .header-controls { display: none; }
-  .mobile-toggle { display: flex; }
+  .desktop-nav { display: none !important; }
+  .header-controls { display: none !important; }
+  .mobile-toggle { display: flex !important; }
 }
 
 /* ── Footer: 2 columns at tablet ───────────────────────────── */
@@ -204,12 +222,12 @@
   .prod-spotlight-media { min-height: 340px; }
   .prod-spotlight-content { padding: 2.5rem; }
   .prod-creds-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 1.5rem; }
-  .prod-framing-grid { grid-template-columns: repeat(2, 1fr); }
+  .prod-framing-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 
   /* Commissions */
   .comm-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
   .comm-hero-media { max-width: 580px; margin: 0 auto; }
-  .comm-process-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .comm-process-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
   .comm-process-grid::before { display: none; }
   .comm-case-row, .comm-case-row.reversed { grid-template-columns: 1fr; gap: 2.5rem; }
   .comm-estimate-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -238,7 +256,7 @@
 
   /* Commissions */
   .comm-hero-stats { flex-wrap: wrap; gap: 1.5rem; }
-  .comm-process-grid { grid-template-columns: 1fr; }
+  .comm-process-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
   .comm-case-media img { height: 280px; }
 
   /* Classes */
@@ -288,10 +306,12 @@
   .prod-creds-grid { grid-template-columns: 1fr; }
   .prod-spec-grid { grid-template-columns: 1fr; }
   .prod-spotlight-content { padding: 1.5rem 1rem; }
+  .prod-framing-grid { grid-template-columns: 1fr; }
 
   /* Commissions */
   .comm-hero { padding: 6.5rem 1rem 3rem; }
   .comm-calc-card, .comm-form-card { padding: 1.75rem 1.25rem; }
+  .comm-process-grid { grid-template-columns: 1fr; }
   .comm-cases-inner,
   .class-sched-inner,
   .about-pillars-inner,
