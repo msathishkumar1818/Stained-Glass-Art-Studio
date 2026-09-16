@@ -1,0 +1,699 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Stained Glass Art Studio â€” Handcrafted stained glass windows, decorative panels, and bespoke commissioned pieces. Studio classes available. Edinburgh, Scotland.">
+  <title>Contact & Atelier Consultation in Edinburgh â€” Stained Glass Art Studio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- External Scripts: FOUC prevention & Tailwind configuration -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ================================================================
+     LOADER
+     ================================================================ -->
+  <div id="site-loader" aria-hidden="true" role="presentation">
+    <div class="loader-window">
+      <div class="loader-pane loader-pane-tl"></div>
+      <div class="loader-pane loader-pane-tr"></div>
+      <div class="loader-pane loader-pane-bl"></div>
+      <div class="loader-pane loader-pane-br"></div>
+      <div class="loader-lead-h"></div>
+      <div class="loader-lead-v"></div>
+      <div class="loader-jewel"></div>
+    </div>
+    <div class="loader-brand-text">
+      <span class="loader-brand-name">Stained Glass</span>
+      <span class="loader-brand-sub">Art Studio</span>
+    </div>
+  </div>
+
+  <!-- ================================================================
+     HEADER
+     ================================================================ -->
+  <header id="site-header" role="banner">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo-link" aria-label="Stained Glass Art Studio â€” Home">
+        <svg class="logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="44" height="44" rx="6" fill="#0E0E12" />
+          <!-- Four jewel-coloured panes -->
+          <rect x="3" y="3" width="17" height="17" fill="#1A4472" />
+          <rect x="24" y="3" width="17" height="17" fill="#8B1520" />
+          <rect x="3" y="24" width="17" height="17" fill="#1A5C3A" />
+          <rect x="24" y="24" width="17" height="17" fill="#D4952A" />
+          <!-- Light sheen -->
+          <rect x="3" y="3" width="17" height="7" fill="white" opacity="0.12" />
+          <rect x="24" y="3" width="17" height="7" fill="white" opacity="0.12" />
+          <!-- Lead came -->
+          <rect x="20" y="0" width="4" height="44" fill="#0E0E12" />
+          <rect x="0" y="20" width="44" height="4" fill="#0E0E12" />
+          <!-- Centre diamond jewel -->
+          <rect x="18.5" y="18.5" width="7" height="7" fill="#C49A2A" transform="rotate(45 22 22)" />
+        </svg>
+        <div class="logo-text-group">
+          <span class="logo-name">Stained Glass</span>
+          <span class="logo-sub">Art Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Primary navigation">
+
+        <!-- Home Dropdown (click only) -->
+        <div class="nav-dropdown" id="home-dropdown">
+          <button class="nav-link nav-dropdown-trigger" data-dropdown-trigger data-page="home" aria-haspopup="true"
+            aria-expanded="false" aria-controls="home-dropdown-panel">
+            Home
+            <svg class="dropdown-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="4,6 8,10 12,6" />
+            </svg>
+          </button>
+
+          <div class="nav-dropdown-menu" id="home-dropdown-panel" role="menu" aria-label="Home pages">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <div class="dropdown-item-badge badge-sapphire">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1A4472" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <line x1="12" y1="3" x2="12" y2="21" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                </svg>
+              </div>
+              <div class="dropdown-item-info">
+                <span class="dropdown-item-title">Home 1</span>
+                <span class="dropdown-item-desc">Window &amp; panel showcase</span>
+              </div>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <div class="dropdown-item-badge badge-gold">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#C49A2A" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M8 12 l4-6 l4 6" />
+                  <path d="M8 12 l4 3 l4-3" />
+                </svg>
+              </div>
+              <div class="dropdown-item-info">
+                <span class="dropdown-item-title">Home 2</span>
+                <span class="dropdown-item-desc">Our craft &amp; artisan story</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="products.html" class="nav-link" data-page="products">Products</a>
+        <a href="commissions.html" class="nav-link" data-page="commissions">Commissions</a>
+        <a href="classes.html" class="nav-link" data-page="classes">Classes</a>
+        <a href="about.html" class="nav-link" data-page="about">About</a>
+        <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+
+      </nav>
+
+      <!-- Desktop Controls -->
+      <div class="header-controls">
+
+        <!-- RTL/LTR Toggle -->
+        <button class="icon-btn rtl-toggle-btn" data-rtl-toggle aria-label="Switch to RTL layout">
+          <span class="rtl-text-ltr">RTL</span>
+          <span class="rtl-text-rtl">LTR</span>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button class="icon-btn" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+          </svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <line x1="12" y1="2" x2="12" y2="6" />
+            <line x1="12" y1="18" x2="12" y2="22" />
+            <line x1="4.93" y1="4.93" x2="7.76" y2="7.76" />
+            <line x1="16.24" y1="16.24" x2="19.07" y2="19.07" />
+            <line x1="2" y1="12" x2="6" y2="12" />
+            <line x1="18" y1="12" x2="22" y2="12" />
+            <line x1="4.93" y1="19.07" x2="7.76" y2="16.24" />
+            <line x1="16.24" y1="7.76" x2="19.07" y2="4.93" />
+          </svg>
+        </button>
+
+        <a href="contact.html" class="btn-cta">Enquire Now</a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="mobile-toggle" data-mobile-open aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="icon-hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    </div>
+  </header>
+
+  <!-- ================================================================
+     MOBILE MENU
+     ================================================================ -->
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-backdrop"></div>
+    <nav class="mobile-drawer">
+
+      <!-- Drawer Header -->
+      <div class="mobile-drawer-head">
+        <a href="index.html" class="logo-link" aria-label="Home" tabindex="-1">
+          <svg class="logo-icon logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <rect width="44" height="44" rx="6" fill="#0E0E12" />
+            <rect x="3" y="3" width="17" height="17" fill="#1A4472" />
+            <rect x="24" y="3" width="17" height="17" fill="#8B1520" />
+            <rect x="3" y="24" width="17" height="17" fill="#1A5C3A" />
+            <rect x="24" y="24" width="17" height="17" fill="#D4952A" />
+            <rect x="3" y="3" width="17" height="7" fill="white" opacity="0.12" />
+            <rect x="24" y="3" width="17" height="7" fill="white" opacity="0.12" />
+            <rect x="20" y="0" width="4" height="44" fill="#0E0E12" />
+            <rect x="0" y="20" width="44" height="4" fill="#0E0E12" />
+            <rect x="18.5" y="18.5" width="7" height="7" fill="#C49A2A" transform="rotate(45 22 22)" />
+          </svg>
+          <div class="logo-text-group">
+            <span class="logo-name logo-name-compact">Stained Glass</span>
+            <span class="logo-sub">Art Studio</span>
+          </div>
+        </a>
+        <button class="mobile-close-btn" data-mobile-close aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      </div>
+
+      <!-- Nav Items -->
+      <ul class="mobile-nav-list" role="list">
+
+        <!-- Home Accordion -->
+        <li class="mobile-nav-item">
+          <button class="mobile-nav-link" data-accordion data-page="home" aria-expanded="false"
+            aria-controls="mobile-home-panel">
+            Home
+            <svg class="accordion-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="4,6 8,10 12,6" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-panel" id="mobile-home-panel" role="region" aria-label="Home sub-pages">
+            <a href="index.html" class="mobile-sub-link">
+              <span class="mobile-sub-dot dot-sapphire" aria-hidden="true"></span>
+              Home 1
+            </a>
+            <a href="home-2.html" class="mobile-sub-link">
+              <span class="mobile-sub-dot dot-gold" aria-hidden="true"></span>
+              Home 2
+            </a>
+          </div>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="products.html" class="mobile-nav-link" data-page="products">Products</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="commissions.html" class="mobile-nav-link" data-page="commissions">Commissions</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="classes.html" class="mobile-nav-link" data-page="classes">Classes</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="about.html" class="mobile-nav-link" data-page="about">About</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="contact.html" class="mobile-nav-link" data-page="contact">Contact</a>
+        </li>
+
+      </ul>
+
+      <!-- Drawer Footer -->
+      <div class="mobile-drawer-footer">
+        <div class="mobile-controls-row">
+
+          <!-- RTL Toggle (mobile) -->
+          <button class="icon-btn rtl-toggle-btn" data-rtl-toggle aria-label="Switch to RTL layout">
+            <span class="rtl-text-ltr">RTL</span>
+            <span class="rtl-text-rtl">LTR</span>
+          </button>
+
+          <!-- Dark Mode Toggle (mobile) -->
+          <button class="icon-btn" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+            </svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <line x1="12" y1="2" x2="12" y2="6" />
+              <line x1="12" y1="18" x2="12" y2="22" />
+              <line x1="4.93" y1="4.93" x2="7.76" y2="7.76" />
+              <line x1="16.24" y1="16.24" x2="19.07" y2="19.07" />
+              <line x1="2" y1="12" x2="6" y2="12" />
+              <line x1="18" y1="12" x2="22" y2="12" />
+              <line x1="4.93" y1="19.07" x2="7.76" y2="16.24" />
+              <line x1="16.24" y1="7.76" x2="19.07" y2="4.93" />
+            </svg>
+          </button>
+
+          <span class="mobile-controls-label">Display</span>
+        </div>
+
+        <a href="contact.html" class="btn-cta mobile-cta-link">Enquire Now</a>
+      </div>
+
+    </nav>
+  </div>
+
+  <!-- ================================================================
+     MAIN â€” Phase 03: Home 1 sections coming next
+     ================================================================ -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- SECTION 1: CONTACT HERO -->
+    <section class="contact-hero" aria-labelledby="contact-hero-heading">
+      <div class="prod-hero-inner">
+        <span class="comm-hero-badge">Atelier Concierge &amp; Appointments</span>
+        <h1 id="contact-hero-heading" class="contact-hero-title">Visit Our Edinburgh Atelier</h1>
+        <p class="contact-hero-desc">
+          Located in the historic heart of Edinburghâ€™s Old Town. Whether planning a bespoke architectural commission,
+          scheduling a private consultation, or inquiring about workshops, our doors are open.
+        </p>
+
+        <!-- Quick Contact Pills -->
+        <div class="contact-pills-row">
+          <a href="tel:+441315568920" class="contact-pill-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>+44 (0)131 556 8920</span>
+          </a>
+
+          <a href="mailto:atelier@stainedglassart.co.uk" class="contact-pill-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span>atelier@stainedglassart.co.uk</span>
+          </a>
+
+          <div class="contact-pill-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>42 Royal Mile, Edinburgh EH8 8BN</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: TWO-COLUMN ATELIER HUB -->
+    <section class="contact-hub-sec" aria-labelledby="hub-heading">
+      <h2 id="hub-heading" class="sr-only">Studio Consultation and Directions</h2>
+      <div class="contact-hub-grid">
+
+        <!-- Left Column: Consultation Form -->
+        <div class="contact-form-card">
+          <span class="comm-hero-badge">Consultation Booking</span>
+          <h3 class="contact-form-title">Book an Atelier Appointment</h3>
+          <p class="contact-form-desc">
+            Meet with a senior glazier in our private viewing room to review glass samples, discuss architectural
+            blueprints, or inspect restored historic panels.
+          </p>
+
+          <form data-ajax-form>
+            <div class="contact-form-row">
+              <div class="contact-field">
+                <label for="c-name" class="contact-label">Full Name</label>
+                <input type="text" id="c-name" class="contact-input" required placeholder="Lord / Lady / Mr / Ms...">
+              </div>
+              <div class="contact-field">
+                <label for="c-email" class="contact-label">Email Address</label>
+                <input type="email" id="c-email" class="contact-input" required placeholder="you@domain.com">
+              </div>
+            </div>
+
+            <div class="contact-form-row">
+              <div class="contact-field">
+                <label for="c-phone" class="contact-label">Telephone</label>
+                <input type="tel" id="c-phone" class="contact-input" placeholder="+44 7000 000000">
+              </div>
+              <div class="contact-field">
+                <label for="c-purpose" class="contact-label">Nature of Inquiry</label>
+                <select id="c-purpose" class="contact-select">
+                  <option>Bespoke Commission Consultation</option>
+                  <option>Heritage Glazing Restoration Survey</option>
+                  <option>Workshop Academy Enrollment</option>
+                  <option>Studio Gallery Viewing</option>
+                  <option>Press or Exhibition Inquiries</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="contact-field">
+              <label for="c-date" class="contact-label">Preferred Date &amp; Time Window</label>
+              <input type="text" id="c-date" class="contact-input"
+                placeholder="e.g. Tuesday morning or Thursday afternoon">
+            </div>
+
+            <div class="contact-field">
+              <label for="c-msg" class="contact-label">Project Details &amp; Message</label>
+              <textarea id="c-msg" class="contact-textarea"
+                placeholder="Provide details about your space, dimensions, or questions..."></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit-btn">Send Consultation Request &rarr;</button>
+          </form>
+        </div>
+
+        <!-- Right Column: Studio Visit Guide & Map -->
+        <div class="contact-info-col">
+          <div class="contact-visit-card">
+            <div class="contact-status-badge">
+              <span class="contact-status-dot"></span>
+              Studio Open Today
+            </div>
+            <h3 class="contact-visit-title">Visiting Hours</h3>
+            <p class="contact-visit-desc">
+              Walk-ins are welcomed for our front gallery exhibition. For in-depth custom commission design
+              consultations, advance booking is recommended.
+            </p>
+
+            <table class="contact-hours-table">
+              <tbody>
+                <tr>
+                  <td>Monday â€“ Friday</td>
+                  <td>09:00 â€“ 17:30</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>10:00 â€“ 16:00</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>By Private Appointment</td>
+                </tr>
+                <tr>
+                  <td>Bank Holidays</td>
+                  <td>11:00 â€“ 15:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Stylized Location Card -->
+          <div class="contact-map-card">
+            <div class="contact-map-header">
+              <h3 class="contact-map-title">Atelier Location &amp; Access</h3>
+              <p class="contact-map-sub">Canongate Courtyard, 42 Royal Mile, Edinburgh</p>
+            </div>
+
+            <div class="contact-map-embed">
+              <iframe class="contact-map-iframe"
+                src="https://maps.google.com/maps?q=Canongate+Courtyard,+42+Royal+Mile,+Edinburgh+EH8+8BN,+UK&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                title="Stained Glass Art Studio Location Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Google Live Map showing Atelier Location on Royal Mile, Edinburgh"></iframe>
+            </div>
+
+            <div class="contact-map-footer">
+              <div class="contact-map-footer-info">
+                <svg class="contact-map-footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <span>6 min walk from Edinburgh Waverley Station &bull; Wheelchair accessible via Bakehouse Close</span>
+              </div>
+              <a href="https://maps.google.com/?q=Canongate+Courtyard,+42+Royal+Mile,+Edinburgh" target="_blank"
+                rel="noopener noreferrer" class="contact-map-directions-btn">
+                Open in Google Maps
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: DEPARTMENT DIRECT DIRECTORY -->
+    <section class="contact-dept-sec" aria-labelledby="dept-heading">
+      <div class="contact-dept-inner">
+        <div class="comm-process-header">
+          <span class="comm-hero-badge">Direct Extensions</span>
+          <h2 id="dept-heading" class="comm-hero-title">Studio Department Directory</h2>
+          <p class="comm-hero-desc">Connect directly with the specialized craft department best suited to assist your
+            project.</p>
+        </div>
+
+        <div class="contact-dept-grid">
+          <!-- Dept 1 -->
+          <div class="contact-dept-card">
+            <span class="contact-dept-tag">Bespoke Projects</span>
+            <h3 class="contact-dept-name">Architectural Commissions</h3>
+            <p class="contact-dept-desc">Direct line to our senior design draftsmen for residential transoms, partition
+              walls, and custom ceiling panels.</p>
+            <a href="mailto:commissions@stainedglassart.co.uk"
+              class="contact-dept-link">commissions@stainedglassart.co.uk &rarr;</a>
+          </div>
+
+          <!-- Dept 2 -->
+          <div class="contact-dept-card">
+            <span class="contact-dept-tag">Academy &amp; Teaching</span>
+            <h3 class="contact-dept-name">Workshops &amp; Education</h3>
+            <p class="contact-dept-desc">Inquiries regarding taster workshops, weekend intensives, master residencies,
+              private corporate bookings, and gift vouchers.</p>
+            <a href="mailto:academy@stainedglassart.co.uk" class="contact-dept-link">academy@stainedglassart.co.uk
+              &rarr;</a>
+          </div>
+
+          <!-- Dept 3 -->
+          <div class="contact-dept-card">
+            <span class="contact-dept-tag">Heritage Conservation</span>
+            <h3 class="contact-dept-name">Restoration &amp; Surveys</h3>
+            <p class="contact-dept-desc">Consultation and condition reports for Listed Category A/B buildings,
+              ecclesiastical trusts, and historic municipal buildings.</p>
+            <a href="mailto:conservation@stainedglassart.co.uk"
+              class="contact-dept-link">conservation@stainedglassart.co.uk &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: EMERGENCY HISTORIC RESTORATION CALLOUT -->
+    <section class="contact-emerg-sec" aria-labelledby="emerg-heading">
+      <div class="contact-emerg-card">
+        <div>
+          <h2 id="emerg-heading" class="contact-emerg-title">Urgent Historic Glazing Emergency?</h2>
+          <p class="contact-emerg-desc">
+            If a historic church, tenement, or listed window has suffered gale damage, vandalism, or structural came
+            bowing requiring immediate weatherproof stabilization, contact our 24/7 conservation rapid-response desk.
+          </p>
+        </div>
+        <a href="tel:+441315568929" class="contact-submit-btn" class="btn-cta-lg">Call Standby: +44 (0)131 556 8929</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+     FOOTER
+     ================================================================ -->
+  <footer id="site-footer" role="contentinfo">
+
+    <div class="footer-glass-bar" aria-hidden="true"></div>
+
+    <div class="footer-body">
+
+      <!-- Brand Column -->
+      <div>
+        <a href="index.html" class="footer-logo-link" aria-label="Stained Glass Art Studio Home">
+          <svg class="footer-logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <rect width="44" height="44" rx="6" fill="#0E0E12" />
+            <rect x="3" y="3" width="17" height="17" fill="#1A4472" />
+            <rect x="24" y="3" width="17" height="17" fill="#8B1520" />
+            <rect x="3" y="24" width="17" height="17" fill="#1A5C3A" />
+            <rect x="24" y="24" width="17" height="17" fill="#D4952A" />
+            <rect x="3" y="3" width="17" height="7" fill="white" opacity="0.12" />
+            <rect x="24" y="3" width="17" height="7" fill="white" opacity="0.12" />
+            <rect x="20" y="0" width="4" height="44" fill="#0E0E12" />
+            <rect x="0" y="20" width="44" height="4" fill="#0E0E12" />
+            <rect x="18.5" y="18.5" width="7" height="7" fill="#C49A2A" transform="rotate(45 22 22)" />
+          </svg>
+          <div class="logo-text-group">
+            <span class="footer-brand-name">Stained Glass</span>
+            <span class="footer-brand-sub">Art Studio</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Handcrafting luminous stained glass windows, decorative panels, and bespoke commissioned pieces since 1987.
+          Every panel is a story told in light and colour.
+        </p>
+        <nav class="footer-socials" aria-label="Social media">
+          <a href="#" class="social-link" aria-label="Follow on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Follow on Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.87 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.74 1.2-5.1 1.2-5.1s-.31-.61-.31-1.52c0-1.43.83-2.5 1.86-2.5.88 0 1.3.66 1.3 1.45 0 .88-.56 2.2-.85 3.43-.24 1.02.5 1.85 1.5 1.85 1.8 0 3.01-2.32 3.01-5.07 0-2.08-1.4-3.65-3.93-3.65-2.87 0-4.67 2.14-4.67 4.55 0 .83.24 1.41.61 1.87.1.11.11.21.08.34-.06.25-.2.84-.23.96-.04.16-.15.2-.34.12-1.25-.51-1.84-1.88-1.84-3.43 0-2.56 2.17-5.66 6.47-5.66 3.47 0 5.75 2.52 5.75 5.23 0 3.59-1.99 6.29-4.9 6.29-.98 0-1.9-.53-2.22-1.12l-.62 2.39c-.22.86-.83 1.94-1.24 2.6.93.29 1.91.45 2.93.45 5.52 0 10-4.48 10-10S17.52 2 12 2z" />
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Follow on Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Watch on YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+              <polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Navigate Column -->
+      <div>
+        <h3 class="footer-col-heading">Navigate</h3>
+        <ul class="footer-nav-list">
+          <li><a href="index.html" class="footer-nav-link">Home 1</a></li>
+          <li><a href="home-2.html" class="footer-nav-link">Home 2</a></li>
+          <li><a href="products.html" class="footer-nav-link">Products</a></li>
+          <li><a href="commissions.html" class="footer-nav-link">Commissions</a></li>
+          <li><a href="classes.html" class="footer-nav-link">Classes</a></li>
+          <li><a href="about.html" class="footer-nav-link">About Studio</a></li>
+          <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Column -->
+      <div>
+        <h3 class="footer-col-heading">Services</h3>
+        <ul class="footer-nav-list">
+          <li><a href="products.html" class="footer-nav-link">Architectural Windows</a></li>
+          <li><a href="products.html" class="footer-nav-link">Decorative Panels</a></li>
+          <li><a href="products.html" class="footer-nav-link">Fused Glass Art</a></li>
+          <li><a href="commissions.html" class="footer-nav-link">Custom Commissions</a></li>
+          <li><a href="commissions.html" class="footer-nav-link">Restoration Work</a></li>
+          <li><a href="classes.html" class="footer-nav-link">Studio Classes</a></li>
+          <li><a href="classes.html" class="footer-nav-link">Gift Certificates</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div>
+        <h3 class="footer-col-heading">Find Us</h3>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <div class="footer-contact-text">
+              <span class="footer-contact-label">Studio</span>
+              42 Artisan Quarter, Glass Lane<br>Edinburgh, EH1 2AB
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <div class="footer-contact-text">
+              <span class="footer-contact-label">Telephone</span>
+              +44 (0)131 555 0184
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <div class="footer-contact-text">
+              <span class="footer-contact-label">Email</span>
+              hello@luminousglass.studio
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12,6 12,12 16,14" />
+            </svg>
+            <div class="footer-contact-text">
+              <span class="footer-contact-label">Hours</span>
+              Mon â€“ Sat: 9:00am â€“ 6:00pm<br>
+              <span class="footer-hours-note">Sunday: By appointment</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; <span id="footer-year"></span> Stained Glass Art Studio. All rights reserved.</p>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Settings</a>
+      </nav>
+    </div>
+
+  </footer>
+
+  <!-- ================================================================
+     SCROLL TO TOP
+     ================================================================ -->
+  <button id="scroll-top" aria-label="Scroll to top of page" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18,15 12,9 6,15" />
+    </svg>
+  </button>
+</body>
+
+</html>

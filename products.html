@@ -1,0 +1,809 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stained Glass Art Studio — Handcrafted stained glass windows, decorative panels, and bespoke commissioned pieces. Studio classes available. Edinburgh, Scotland.">
+  <title>Handcrafted Stained Glass Collection & Catalog — Stained Glass Art Studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- External Scripts: FOUC prevention & Tailwind configuration -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+<!-- ================================================================
+     LOADER
+     ================================================================ -->
+<div id="site-loader" aria-hidden="true" role="presentation">
+  <div class="loader-window">
+    <div class="loader-pane loader-pane-tl"></div>
+    <div class="loader-pane loader-pane-tr"></div>
+    <div class="loader-pane loader-pane-bl"></div>
+    <div class="loader-pane loader-pane-br"></div>
+    <div class="loader-lead-h"></div>
+    <div class="loader-lead-v"></div>
+    <div class="loader-jewel"></div>
+  </div>
+  <div class="loader-brand-text">
+    <span class="loader-brand-name">Stained Glass</span>
+    <span class="loader-brand-sub">Art Studio</span>
+  </div>
+</div>
+
+<!-- ================================================================
+     HEADER
+     ================================================================ -->
+<header id="site-header" role="banner">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo-link" aria-label="Stained Glass Art Studio — Home">
+      <svg class="logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="44" height="44" rx="6" fill="#0E0E12"/>
+        <!-- Four jewel-coloured panes -->
+        <rect x="3" y="3" width="17" height="17" fill="#1A4472"/>
+        <rect x="24" y="3" width="17" height="17" fill="#8B1520"/>
+        <rect x="3" y="24" width="17" height="17" fill="#1A5C3A"/>
+        <rect x="24" y="24" width="17" height="17" fill="#D4952A"/>
+        <!-- Light sheen -->
+        <rect x="3" y="3" width="17" height="7" fill="white" opacity="0.12"/>
+        <rect x="24" y="3" width="17" height="7" fill="white" opacity="0.12"/>
+        <!-- Lead came -->
+        <rect x="20" y="0" width="4" height="44" fill="#0E0E12"/>
+        <rect x="0" y="20" width="44" height="4" fill="#0E0E12"/>
+        <!-- Centre diamond jewel -->
+        <rect x="18.5" y="18.5" width="7" height="7" fill="#C49A2A" transform="rotate(45 22 22)"/>
+      </svg>
+      <div class="logo-text-group">
+        <span class="logo-name">Stained Glass</span>
+        <span class="logo-sub">Art Studio</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav" aria-label="Primary navigation">
+
+      <!-- Home Dropdown (click only) -->
+      <div class="nav-dropdown" id="home-dropdown">
+        <button
+          class="nav-link nav-dropdown-trigger"
+          data-dropdown-trigger
+          data-page="home"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="home-dropdown-panel"
+        >
+          Home
+          <svg class="dropdown-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="4,6 8,10 12,6"/>
+          </svg>
+        </button>
+
+        <div class="nav-dropdown-menu" id="home-dropdown-panel" role="menu" aria-label="Home pages">
+          <a href="index.html" class="dropdown-item" role="menuitem">
+            <div class="dropdown-item-badge badge-sapphire">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1A4472" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <line x1="12" y1="3" x2="12" y2="21"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+              </svg>
+            </div>
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-title">Home 1</span>
+              <span class="dropdown-item-desc">Window &amp; panel showcase</span>
+            </div>
+          </a>
+          <a href="home-2.html" class="dropdown-item" role="menuitem">
+            <div class="dropdown-item-badge badge-gold">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#C49A2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M8 12 l4-6 l4 6"/>
+                <path d="M8 12 l4 3 l4-3"/>
+              </svg>
+            </div>
+            <div class="dropdown-item-info">
+              <span class="dropdown-item-title">Home 2</span>
+              <span class="dropdown-item-desc">Our craft &amp; artisan story</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <a href="products.html"    class="nav-link" data-page="products">Products</a>
+      <a href="commissions.html" class="nav-link" data-page="commissions">Commissions</a>
+      <a href="classes.html"     class="nav-link" data-page="classes">Classes</a>
+      <a href="about.html"       class="nav-link" data-page="about">About</a>
+      <a href="contact.html"     class="nav-link" data-page="contact">Contact</a>
+
+    </nav>
+
+    <!-- Desktop Controls -->
+    <div class="header-controls">
+
+      <!-- RTL/LTR Toggle -->
+      <button class="icon-btn rtl-toggle-btn" data-rtl-toggle aria-label="Switch to RTL layout">
+        <span class="rtl-text-ltr">RTL</span>
+        <span class="rtl-text-rtl">LTR</span>
+      </button>
+
+      <!-- Dark Mode Toggle -->
+      <button class="icon-btn" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" >
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="12" y1="2"   x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+          <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+          <line x1="2"  y1="12" x2="6"  y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
+          <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+        </svg>
+      </button>
+
+      <a href="contact.html" class="btn-cta">Enquire Now</a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button class="mobile-toggle" data-mobile-open aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="icon-hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+  </div>
+</header>
+
+<!-- ================================================================
+     MOBILE MENU
+     ================================================================ -->
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="mobile-backdrop"></div>
+  <nav class="mobile-drawer">
+
+    <!-- Drawer Header -->
+    <div class="mobile-drawer-head">
+      <a href="index.html" class="logo-link" aria-label="Home" tabindex="-1">
+        <svg class="logo-icon logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="44" height="44" rx="6" fill="#0E0E12"/>
+          <rect x="3" y="3" width="17" height="17" fill="#1A4472"/>
+          <rect x="24" y="3" width="17" height="17" fill="#8B1520"/>
+          <rect x="3" y="24" width="17" height="17" fill="#1A5C3A"/>
+          <rect x="24" y="24" width="17" height="17" fill="#D4952A"/>
+          <rect x="3" y="3" width="17" height="7" fill="white" opacity="0.12"/>
+          <rect x="24" y="3" width="17" height="7" fill="white" opacity="0.12"/>
+          <rect x="20" y="0" width="4" height="44" fill="#0E0E12"/>
+          <rect x="0" y="20" width="44" height="4" fill="#0E0E12"/>
+          <rect x="18.5" y="18.5" width="7" height="7" fill="#C49A2A" transform="rotate(45 22 22)"/>
+        </svg>
+        <div class="logo-text-group">
+          <span class="logo-name logo-name-compact">Stained Glass</span>
+          <span class="logo-sub">Art Studio</span>
+        </div>
+      </a>
+      <button class="mobile-close-btn" data-mobile-close aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Nav Items -->
+    <ul class="mobile-nav-list" role="list">
+
+      <!-- Home Accordion -->
+      <li class="mobile-nav-item">
+        <button
+          class="mobile-nav-link"
+          data-accordion
+          data-page="home"
+          aria-expanded="false"
+          aria-controls="mobile-home-panel"
+        >
+          Home
+          <svg class="accordion-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="4,6 8,10 12,6"/>
+          </svg>
+        </button>
+        <div class="mobile-accordion-panel" id="mobile-home-panel" role="region" aria-label="Home sub-pages">
+          <a href="index.html" class="mobile-sub-link">
+            <span class="mobile-sub-dot dot-sapphire" aria-hidden="true"></span>
+            Home 1
+          </a>
+          <a href="home-2.html" class="mobile-sub-link">
+            <span class="mobile-sub-dot dot-gold" aria-hidden="true"></span>
+            Home 2
+          </a>
+        </div>
+      </li>
+
+      <li class="mobile-nav-item">
+        <a href="products.html"    class="mobile-nav-link" data-page="products">Products</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="commissions.html" class="mobile-nav-link" data-page="commissions">Commissions</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="classes.html"     class="mobile-nav-link" data-page="classes">Classes</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html"       class="mobile-nav-link" data-page="about">About</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contact.html"     class="mobile-nav-link" data-page="contact">Contact</a>
+      </li>
+
+    </ul>
+
+    <!-- Drawer Footer -->
+    <div class="mobile-drawer-footer">
+      <div class="mobile-controls-row">
+
+        <!-- RTL Toggle (mobile) -->
+        <button class="icon-btn rtl-toggle-btn" data-rtl-toggle aria-label="Switch to RTL layout">
+        <span class="rtl-text-ltr">RTL</span>
+        <span class="rtl-text-rtl">LTR</span>
+      </button>
+
+        <!-- Dark Mode Toggle (mobile) -->
+        <button class="icon-btn" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+          </svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" >
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="12" y1="2"   x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+            <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+            <line x1="2"  y1="12" x2="6"  y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
+            <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+          </svg>
+        </button>
+
+        <span class="mobile-controls-label">Display</span>
+      </div>
+
+      <a href="contact.html" class="btn-cta mobile-cta-link">Enquire Now</a>
+    </div>
+
+  </nav>
+</div>
+
+<!-- ================================================================
+     MAIN — Phase 03: Home 1 sections coming next
+     ================================================================ -->
+<main id="main-content" tabindex="-1">
+
+  <!-- SECTION 1: CATALOG HERO & FILTER BAR -->
+  <section class="prod-hero" aria-labelledby="prod-hero-heading">
+    <div class="prod-hero-inner">
+      <span class="comm-hero-badge">Curated Studio Collection</span>
+      <h1 id="prod-hero-heading" class="prod-hero-title">Handcrafted Glass Art</h1>
+      <p class="prod-hero-desc">
+        Each individual panel, sun-catcher, and architectural piece is hand-scored, leaded, and cemented in our Edinburgh workshop using heritage mouthblown glass from historic European ateliers.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="prod-filter-bar" role="toolbar" aria-label="Filter glass art by category">
+        <button type="button" class="prod-filter-btn active" data-filter="all">All Works</button>
+        <button type="button" class="prod-filter-btn" data-filter="sun-catchers">Sun Catchers</button>
+        <button type="button" class="prod-filter-btn" data-filter="panels">Window Panels</button>
+        <button type="button" class="prod-filter-btn" data-filter="lighting">Lamps &amp; Lighting</button>
+        <button type="button" class="prod-filter-btn" data-filter="architectural">Architectural Inserts</button>
+      </div>
+      <p class="prod-count-text" aria-live="polite">Showing 8 handcrafted pieces</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SPOTLIGHT MASTERPIECE -->
+  <section class="prod-spotlight-sec" aria-labelledby="spotlight-title">
+    <div class="prod-spotlight-card">
+      <div class="prod-spotlight-media">
+        <img src="assets/images/gallery/p21.jpg" alt="The Celestial Cathedral Rose Panel" class="prod-spotlight-img">
+        <span class="prod-spotlight-badge">Masterpiece of the Month</span>
+      </div>
+      <div class="prod-spotlight-content">
+        <div class="prod-spotlight-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Featured Exhibition Piece
+        </div>
+        <h2 id="spotlight-title" class="prod-spotlight-title">The Celestial Cathedral Rose Panel</h2>
+        <p class="prod-spotlight-desc">
+          Inspired by 13th-century North Transept windows, this circular rose medallion combines mouthblown cobalt flashed glass, silver-stained amber roundels, and hand-milled lead came with internal steel reinforcing.
+        </p>
+
+        <div class="prod-spec-grid">
+          <div class="prod-spec-item">
+            <span class="prod-spec-label">Dimensions</span>
+            <span class="prod-spec-val">92cm × 92cm (36" × 36")</span>
+          </div>
+          <div class="prod-spec-item">
+            <span class="prod-spec-label">Glass Origin</span>
+            <span class="prod-spec-val">Lamberts Mouthblown (Germany)</span>
+          </div>
+          <div class="prod-spec-item">
+            <span class="prod-spec-label">Came Profile</span>
+            <span class="prod-spec-val">Traditional 6mm &amp; 9mm Lead</span>
+          </div>
+          <div class="prod-spec-item">
+            <span class="prod-spec-label">Mounting</span>
+            <span class="prod-spec-val">Integrated Hardwood Oak Surround</span>
+          </div>
+        </div>
+
+        <div class="prod-spotlight-actions">
+          <span class="prod-price-tag">₹2,450</span>
+          <a href="commissions.html" class="prod-card-btn">Inquire for Acquisition</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: PRODUCT CATALOG GRID -->
+  <section class="prod-catalog-sec" aria-labelledby="catalog-heading">
+    <h2 id="catalog-heading" class="sr-only">Product Catalog</h2>
+    <div class="prod-grid">
+
+      <!-- Product 1 -->
+      <article class="prod-card" data-category="sun-catchers">
+        <div class="prod-card-media">
+          <img src="assets/images/gallery/p22.jpg" alt="Solstice Prismatic Sun-Catcher" class="prod-card-img">
+          <span class="prod-card-badge">Sun Catcher</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-meta">
+            <span class="prod-card-type">Wissmach Florentine</span>
+            <span class="prod-card-dims">Ø 24cm (9.5")</span>
+          </div>
+          <h3 class="prod-card-title">Solstice Prismatic Sun-Catcher</h3>
+          <p class="prod-card-desc">Hand-foiled sun medallion with beveled prism core that projects rainbows across interior rooms as the sun moves.</p>
+          <div class="prod-card-footer">
+            <span class="prod-card-price">₹145</span>
+            <a href="contact.html" class="prod-card-btn">Reserve Piece</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="prod-card" data-category="panels">
+        <div class="prod-card-media">
+          <img src="assets/images/gallery/p23.jpg" alt="Art Nouveau Botanical Window Panel" class="prod-card-img">
+          <span class="prod-card-badge">Window Panel</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-meta">
+            <span class="prod-card-type">Antique Mouthblown</span>
+            <span class="prod-card-dims">45cm × 75cm</span>
+          </div>
+          <h3 class="prod-card-title">Art Nouveau Botanical Panel</h3>
+          <p class="prod-card-desc">Sinuous iris and water lily motifs hand-leaded in English rolled glass with translucent olive and amethyst tones.</p>
+          <div class="prod-card-footer">
+            <span class="prod-card-price">₹680</span>
+            <a href="contact.html" class="prod-card-btn">Reserve Piece</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="prod-card" data-category="architectural">
+        <div class="prod-card-media">
+          <img src="assets/images/gallery/p24.jpg" alt="Midnight Azure Geometric Insert" class="prod-card-img">
+          <span class="prod-card-badge">Architectural</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-meta">
+            <span class="prod-card-type">Spectrum Waterglass</span>
+            <span class="prod-card-dims">50cm × 50cm</span>
+          </div>
+          <h3 class="prod-card-title">Midnight Azure Geometric Insert</h3>
+          <p class="prod-card-desc">Contemporary architectural panel for interior partition walls or door sidelights featuring diamond lattice came work.</p>
+          <div class="prod-card-footer">
+            <span class="prod-card-price">₹520</span>
+            <a href="contact.html" class="prod-card-btn">Reserve Piece</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="prod-card" data-category="panels">
+        <div class="prod-card-media">
+          <img src="assets/images/gallery/p25.jpg" alt="Cathedral Gothic Arch Transom" class="prod-card-img">
+          <span class="prod-card-badge">Window Panel</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-meta">
+            <span class="prod-card-type">Flashed Ruby &amp; Amber</span>
+            <span class="prod-card-dims">60cm × 90cm</span>
+          </div>
+          <h3 class="prod-card-title">Cathedral Gothic Arch Transom</h3>
+          <p class="prod-card-desc">Pointed arch panel inspired by Scottish abbey architecture, framed with traditional linseed-oil lead glazing putty.</p>
+          <div class="prod-card-footer">
+            <span class="prod-card-price">₹980</span>
+            <a href="contact.html" class="prod-card-btn">Reserve Piece</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 5 -->
+      <article class="prod-card" data-category="lighting">
+        <div class="prod-card-media">
+          <img src="assets/images/hero/p26.jpg" alt="Luminous Heritage Accent Lantern" class="prod-card-img">
+          <span class="prod-card-badge">Lamps &amp; Lighting</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-meta">
+            <span class="prod-card-type">Copper-Foiled Opalescent</span>
+            <span class="prod-card-dims">35cm Height</span>
+          </div>
+          <h3 class="prod-card-title">Luminous Heritage Lantern</h3>
+          <p class="prod-card-desc">Four-sided artisan lantern with warm amber and seafoam glass that casts dappled mosaic light across wall surfaces.</p>
+          <div class="prod-card-footer">
+            <span class="prod-card-price">₹420</span>
+            <a href="contact.html" class="prod-card-btn">Reserve Piece</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 6 -->
+      <article class="prod-card" data-category="panels">
+        <div class="prod-card-media">
+          <img src="assets/images/gallery/p27.jpg" alt="Highland Heather Came Panel" class="prod-card-img">
+          <span class="prod-card-badge">Window Panel</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-meta">
+            <span class="prod-card-type">Kokomo Streaky Glass</span>
+            <span class="prod-card-dims">40cm × 60cm</span>
+          </div>
+          <h3 class="prod-card-title">Highland Heather Came Panel</h3>
+          <p class="prod-card-desc">Rich violet, sage, and smoky quartz hues celebrate the Scottish landscape in heavy-gauge hand-soldered lead came.</p>
+          <div class="prod-card-footer">
+            <span class="prod-card-price">₹560</span>
+            <a href="contact.html" class="prod-card-btn">Reserve Piece</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 7 -->
+      <article class="prod-card" data-category="sun-catchers">
+        <div class="prod-card-media">
+          <img src="assets/images/sections/p28.jpg" alt="Aurora Borealis Window Medallion" class="prod-card-img">
+          <span class="prod-card-badge">Sun Catcher</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-meta">
+            <span class="prod-card-type">Dichroic &amp; Crystal</span>
+            <span class="prod-card-dims">Ø 28cm</span>
+          </div>
+          <h3 class="prod-card-title">Aurora Borealis Window Medallion</h3>
+          <p class="prod-card-desc">Multi-layered glass disk incorporating dichroic specialty glass that shifts in hue from emerald to violet under changing daylight.</p>
+          <div class="prod-card-footer">
+            <span class="prod-card-price">₹195</span>
+            <a href="contact.html" class="prod-card-btn">Reserve Piece</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 8 -->
+      <article class="prod-card" data-category="architectural">
+        <div class="prod-card-media">
+          <img src="assets/images/sections/p29.jpg" alt="Victorian Heritage Doorlight Insert" class="prod-card-img">
+          <span class="prod-card-badge">Architectural</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-meta">
+            <span class="prod-card-type">Hand-Drawn Lead Came</span>
+            <span class="prod-card-dims">35cm × 85cm</span>
+          </div>
+          <h3 class="prod-card-title">Victorian Heritage Doorlight</h3>
+          <p class="prod-card-desc">Historically accurate replacement door panel designed for 19th-century Edinburgh tenements with patterned obscured borders.</p>
+          <div class="prod-card-footer">
+            <span class="prod-card-price">₹750</span>
+            <a href="contact.html" class="prod-card-btn">Reserve Piece</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: ARTISAN CREDENTIALS RIBBON -->
+  <section class="prod-creds-sec" aria-label="Studio quality standards">
+    <div class="prod-creds-grid">
+      <div class="prod-cred-item">
+        <div class="prod-cred-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="prod-cred-title">Mouthblown Antique Glass</h3>
+          <p class="prod-cred-desc">Sourced from historic European glassworks, each sheet contains organic seeds, striations, and character.</p>
+        </div>
+      </div>
+      <div class="prod-cred-item">
+        <div class="prod-cred-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="prod-cred-title">Heritage Leading &amp; Foil</h3>
+          <p class="prod-cred-desc">Pure milled lead came and high-tack copper foil assembled with master-grade soldering for permanent durability.</p>
+        </div>
+      </div>
+      <div class="prod-cred-item">
+        <div class="prod-cred-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 14 14"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="prod-cred-title">Weather &amp; UV Cemented</h3>
+          <p class="prod-cred-desc">Traditional linseed-oil black cement driven under the came leaves ensures complete structural waterproof sealing.</p>
+        </div>
+      </div>
+      <div class="prod-cred-item">
+        <div class="prod-cred-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="3" width="15" height="13"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="prod-cred-title">Reinforced Insured Crating</h3>
+          <p class="prod-cred-desc">Custom foam-cushioned wooden timber crating guarantees secure, fully insured transit throughout the UK and worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: FRAMING & DISPLAY OPTIONS -->
+  <section class="prod-framing-sec" aria-labelledby="framing-heading">
+    <div class="comm-process-header">
+      <span class="comm-hero-badge">Custom Presentation</span>
+      <h2 id="framing-heading" class="comm-hero-title">Mounting &amp; Framing Options</h2>
+      <p class="comm-hero-desc">Every piece can be customized with our workshop framing solutions to seamlessly integrate into your home or heritage property.</p>
+    </div>
+
+    <div class="prod-framing-grid">
+      <!-- Frame 1 -->
+      <div class="prod-frame-card">
+        <div class="prod-frame-icon-wrap" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <rect x="6" y="6" width="12" height="12"/>
+          </svg>
+        </div>
+        <h3 class="prod-frame-title">Solid Scottish Oak Surround</h3>
+        <p class="prod-frame-desc">Sustainably harvested Scottish oak with hand-rubbed beeswax finish. Includes countersunk keyhole brass wall mounts.</p>
+        <ul class="prod-frame-list">
+          <li>Deep shadow-line profile</li>
+          <li>Natural, dark fumed, or blackened oak</li>
+          <li>Interior hanging or window sill placement</li>
+        </ul>
+      </div>
+
+      <!-- Frame 2 -->
+      <div class="prod-frame-card">
+        <div class="prod-frame-icon-wrap" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 3v18"/>
+          </svg>
+        </div>
+        <h3 class="prod-frame-title">Patinated Brass Perimeter</h3>
+        <p class="prod-frame-desc">Solid extruded brass channel came chemically oxidized to an antique bronze patina for an understated museum-grade display.</p>
+        <ul class="prod-frame-list">
+          <li>Ultra-slim 10mm sightline</li>
+          <li>Corrosion-resistant antique finish</li>
+          <li>Integrated top suspension loops</li>
+        </ul>
+      </div>
+
+      <!-- Frame 3 -->
+      <div class="prod-frame-card">
+        <div class="prod-frame-icon-wrap" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="2" x2="12" y2="12"/>
+            <circle cx="12" cy="16" r="4"/>
+          </svg>
+        </div>
+        <h3 class="prod-frame-title">Suspended Steel Cable System</h3>
+        <p class="prod-frame-desc">Minimalist floating suspension for window apertures, utilizing marine-grade stainless steel cables and micro-tensioners.</p>
+        <ul class="prod-frame-list">
+          <li>Virtually invisible ceiling fixings</li>
+          <li>Rated to 45kg load capacity</li>
+          <li>Allows light to pass unobstructed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: COMMISSION CTA BANNER -->
+  <section class="contact-emerg-sec" aria-labelledby="prod-cta-heading">
+    <div class="contact-emerg-card">
+      <div>
+        <h2 id="prod-cta-heading" class="contact-emerg-title">Have a Bespoke Vision in Mind?</h2>
+        <p class="contact-emerg-desc">
+          If your space requires custom dimensions, specific historic color palettes, or commemorative heraldry, our artisans design and fabricate bespoke commissioned windows.
+        </p>
+      </div>
+      <a href="commissions.html" class="contact-submit-btn" class="btn-cta-lg">Explore Commissions &rarr;</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer id="site-footer" role="contentinfo">
+
+  <div class="footer-glass-bar" aria-hidden="true"></div>
+
+  <div class="footer-body">
+
+    <!-- Brand Column -->
+    <div>
+      <a href="index.html" class="footer-logo-link" aria-label="Stained Glass Art Studio Home">
+        <svg class="footer-logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="44" height="44" rx="6" fill="#0E0E12"/>
+          <rect x="3" y="3" width="17" height="17" fill="#1A4472"/>
+          <rect x="24" y="3" width="17" height="17" fill="#8B1520"/>
+          <rect x="3" y="24" width="17" height="17" fill="#1A5C3A"/>
+          <rect x="24" y="24" width="17" height="17" fill="#D4952A"/>
+          <rect x="3" y="3" width="17" height="7" fill="white" opacity="0.12"/>
+          <rect x="24" y="3" width="17" height="7" fill="white" opacity="0.12"/>
+          <rect x="20" y="0" width="4" height="44" fill="#0E0E12"/>
+          <rect x="0" y="20" width="44" height="4" fill="#0E0E12"/>
+          <rect x="18.5" y="18.5" width="7" height="7" fill="#C49A2A" transform="rotate(45 22 22)"/>
+        </svg>
+        <div class="logo-text-group">
+          <span class="footer-brand-name">Stained Glass</span>
+          <span class="footer-brand-sub">Art Studio</span>
+        </div>
+      </a>
+      <p class="footer-desc">
+        Handcrafting luminous stained glass windows, decorative panels, and bespoke commissioned pieces since 1987. Every panel is a story told in light and colour.
+      </p>
+      <nav class="footer-socials" aria-label="Social media">
+        <a href="#" class="social-link" aria-label="Follow on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Follow on Pinterest">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.87 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.74 1.2-5.1 1.2-5.1s-.31-.61-.31-1.52c0-1.43.83-2.5 1.86-2.5.88 0 1.3.66 1.3 1.45 0 .88-.56 2.2-.85 3.43-.24 1.02.5 1.85 1.5 1.85 1.8 0 3.01-2.32 3.01-5.07 0-2.08-1.4-3.65-3.93-3.65-2.87 0-4.67 2.14-4.67 4.55 0 .83.24 1.41.61 1.87.1.11.11.21.08.34-.06.25-.2.84-.23.96-.04.16-.15.2-.34.12-1.25-.51-1.84-1.88-1.84-3.43 0-2.56 2.17-5.66 6.47-5.66 3.47 0 5.75 2.52 5.75 5.23 0 3.59-1.99 6.29-4.9 6.29-.98 0-1.9-.53-2.22-1.12l-.62 2.39c-.22.86-.83 1.94-1.24 2.6.93.29 1.91.45 2.93.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Follow on Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Watch on YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+            <polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Navigate Column -->
+    <div>
+      <h3 class="footer-col-heading">Navigate</h3>
+      <ul class="footer-nav-list">
+        <li><a href="index.html"       class="footer-nav-link">Home 1</a></li>
+        <li><a href="home-2.html"      class="footer-nav-link">Home 2</a></li>
+        <li><a href="products.html"    class="footer-nav-link">Products</a></li>
+        <li><a href="commissions.html" class="footer-nav-link">Commissions</a></li>
+        <li><a href="classes.html"     class="footer-nav-link">Classes</a></li>
+        <li><a href="about.html"       class="footer-nav-link">About Studio</a></li>
+        <li><a href="contact.html"     class="footer-nav-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services Column -->
+    <div>
+      <h3 class="footer-col-heading">Services</h3>
+      <ul class="footer-nav-list">
+        <li><a href="products.html"    class="footer-nav-link">Architectural Windows</a></li>
+        <li><a href="products.html"    class="footer-nav-link">Decorative Panels</a></li>
+        <li><a href="products.html"    class="footer-nav-link">Fused Glass Art</a></li>
+        <li><a href="commissions.html" class="footer-nav-link">Custom Commissions</a></li>
+        <li><a href="commissions.html" class="footer-nav-link">Restoration Work</a></li>
+        <li><a href="classes.html"     class="footer-nav-link">Studio Classes</a></li>
+        <li><a href="classes.html"     class="footer-nav-link">Gift Certificates</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Column -->
+    <div>
+      <h3 class="footer-col-heading">Find Us</h3>
+      <ul class="footer-contact-list">
+        <li class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <div class="footer-contact-text">
+            <span class="footer-contact-label">Studio</span>
+            42 Artisan Quarter, Glass Lane<br>Edinburgh, EH1 2AB
+          </div>
+        </li>
+        <li class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <div class="footer-contact-text">
+            <span class="footer-contact-label">Telephone</span>
+            +44 (0)131 555 0184
+          </div>
+        </li>
+        <li class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <div class="footer-contact-text">
+            <span class="footer-contact-label">Email</span>
+            hello@luminousglass.studio
+          </div>
+        </li>
+        <li class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12,6 12,12 16,14"/>
+          </svg>
+          <div class="footer-contact-text">
+            <span class="footer-contact-label">Hours</span>
+            Mon – Sat: 9:00am – 6:00pm<br>
+            <span class="footer-hours-note">Sunday: By appointment</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; <span id="footer-year"></span> Stained Glass Art Studio. All rights reserved.</p>
+    <nav class="footer-legal" aria-label="Legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Cookie Settings</a>
+    </nav>
+  </div>
+
+</footer>
+
+<!-- ================================================================
+     SCROLL TO TOP
+     ================================================================ -->
+<button id="scroll-top" aria-label="Scroll to top of page" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="18,15 12,9 6,15"/>
+  </svg>
+</button>
+</body>
+</html>
+
