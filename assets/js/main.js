@@ -111,7 +111,21 @@
     const openBtns  = qsa('[data-mobile-open]');
     const closeBtns = qsa('[data-mobile-close]');
 
+    const closeAllAccordions = () => {
+      qsa('[data-accordion]').forEach(t => {
+        t.classList.remove('is-open');
+        t.setAttribute('aria-expanded', 'false');
+        const panel = t.nextElementSibling;
+        if (panel && panel.classList.contains('mobile-accordion-panel')) {
+          panel.classList.remove('is-open');
+          panel.classList.remove('open');
+        }
+      });
+    };
+
     const openMenu = () => {
+      // Automatically reset all accordions to closed when opening mobile menu
+      closeAllAccordions();
       menu.classList.add('is-open');
       document.body.style.overflow = 'hidden';
       openBtns.forEach(b => {
@@ -127,6 +141,8 @@
         b.setAttribute('aria-expanded', 'false');
         b.classList.remove('is-active');
       });
+      // Automatically close accordions on menu close
+      closeAllAccordions();
     };
 
     openBtns.forEach(btn => on(btn, 'click', () => {
@@ -151,9 +167,9 @@
       if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
     });
 
-    // Close mobile menu if resized to desktop screens (> 1024px)
+    // Close mobile menu if resized to desktop screens (> 1380px)
     on(window, 'resize', () => {
-      if (window.innerWidth > 1024 && menu.classList.contains('is-open')) {
+      if (window.innerWidth > 1380 && menu.classList.contains('is-open')) {
         closeMenu();
       }
     });
@@ -189,22 +205,38 @@
     });
   }
 
-  /* ── Mobile Accordion ──────────────────────────────────────── */
+  /* ── Mobile Accordion — CLICK ONLY & AUTO-CLOSED BY DEFAULT ─── */
   function initMobileAccordion() {
-    qsa('[data-accordion]').forEach(trigger => {
+    const accordions = qsa('[data-accordion]');
+
+    const closeAll = () => {
+      accordions.forEach(t => {
+        t.classList.remove('is-open');
+        t.setAttribute('aria-expanded', 'false');
+        const panel = t.nextElementSibling;
+        if (panel && panel.classList.contains('mobile-accordion-panel')) {
+          panel.classList.remove('is-open');
+          panel.classList.remove('open');
+        }
+      });
+    };
+
+    // Ensure all accordions start strictly closed by default
+    closeAll();
+
+    accordions.forEach(trigger => {
       const panel = trigger.nextElementSibling;
       if (!panel || !panel.classList.contains('mobile-accordion-panel')) return;
 
-      on(trigger, 'click', () => {
+      on(trigger, 'click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         const isOpen = trigger.classList.contains('is-open');
 
-        // Close all open accordions
-        qsa('[data-accordion].is-open').forEach(t => {
-          t.classList.remove('is-open');
-          if (t.nextElementSibling) t.nextElementSibling.classList.remove('is-open');
-          t.setAttribute('aria-expanded', 'false');
-        });
+        // Close all other open accordions
+        closeAll();
 
+        // Only open if it was previously closed (toggle)
         if (!isOpen) {
           trigger.classList.add('is-open');
           panel.classList.add('is-open');
@@ -212,6 +244,16 @@
         }
       });
     });
+
+    // Auto-close accordion if user clicks anywhere else in the mobile drawer (outside Home accordion)
+    const mobileDrawer = qs('.mobile-drawer');
+    if (mobileDrawer) {
+      on(mobileDrawer, 'click', (e) => {
+        if (!e.target.closest('[data-accordion]') && !e.target.closest('.mobile-accordion-panel')) {
+          closeAll();
+        }
+      });
+    }
   }
 
   /* ── Active Navigation ─────────────────────────────────────── */
