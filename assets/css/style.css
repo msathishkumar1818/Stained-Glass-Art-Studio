@@ -25,6 +25,10 @@
   --site-container: 1280px;
   --page-hero-height: 520px;
 
+  /* Gold Text & Eyebrow Accent Tokens - High Contrast & Crisp in Light Mode */
+  --gold-text:      #965B00;
+  --gold-dash:      #C47F00;
+
   /* Light Mode Tokens - Ultra High Contrast & Bright */
   --c-bg:       #FAF6EE;
   --c-bg2:      #F0E8D6;
@@ -47,6 +51,9 @@
 
 /* Dark Mode Tokens - Ultra Bright Brilliant Typography */
 .dark {
+  --gold-text:      #FDE047;
+  --gold-dash:      #FDE047;
+
   --c-bg:       #000000;
   --c-bg2:      #0A0A0E;
   --c-bg3:      #111118;
@@ -1010,8 +1017,8 @@ main { padding-block-start: 0; }
 .gallery-side-col { flex-shrink: 0; }
 .gallery-sub-limit { max-width: 340px; }
 .collection-link-spaced { margin-top: 1.25rem; }
-.section-eyebrow-center { color: rgba(196,154,42,0.8); justify-content: center; }
-.section-eyebrow-gold { color: rgba(196,154,42,0.8); }
+.section-eyebrow-center { color: var(--gold-text); justify-content: center; font-weight: 700; }
+.section-eyebrow-gold { color: var(--gold-text); font-weight: 700; }
 .craft-cta-wrap { margin-top: 2.5rem; }
 .btn-pad-md { padding: 0.75rem 1.75rem; }
 .collections-header-bar { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
@@ -1118,7 +1125,7 @@ main { padding-block-start: 0; }
   color: #0E0E12 !important;
   background: var(--jewel-gold) !important;
 }
-.h2-sec-tag-gold { color: var(--jewel-gold); }
+.h2-sec-tag-gold { color: var(--gold-text); font-weight: 750; }
 
 /* Placeholder Hero Styles for inner pages */
 .page-placeholder-hero {
@@ -1511,11 +1518,11 @@ main { padding-block-start: 0; }
   font-family: var(--font-display);
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--jewel-gold);
+  color: var(--gold-text);
   line-height: 1;
   flex-shrink: 0;
   width: 2.5rem;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .craft-step-title {
@@ -1870,19 +1877,20 @@ main { padding-block-start: 0; }
   align-items: center;
   gap: 10px;
   font-family: var(--font-ui);
-  font-size: 0.63rem;
-  font-weight: 600;
-  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--jewel-gold);
+  color: var(--gold-text);
   margin-bottom: 1rem;
 }
 
 .section-eyebrow-dash {
   display: block;
-  width: 28px;
-  height: 1px;
-  background: var(--jewel-gold);
+  width: 26px;
+  height: 2px;
+  background: var(--gold-dash);
+  border-radius: 1px;
 }
 
 .section-heading {
@@ -1949,14 +1957,14 @@ main { padding-block-start: 0; }
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-ui);
-  font-size: 0.68rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--jewel-gold);
+  color: var(--gold-text);
   padding: 0.35rem 0.85rem;
-  background: rgba(196,154,42,0.1);
-  border: 1px solid rgba(196,154,42,0.25);
+  background: rgba(196,154,42,0.12);
+  border: 1px solid rgba(196,154,42,0.3);
   border-radius: 9999px;
   margin-bottom: 1.25rem;
 }
@@ -1965,8 +1973,8 @@ main { padding-block-start: 0; }
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--jewel-gold);
-  box-shadow: 0 0 8px var(--jewel-gold);
+  background: var(--gold-dash);
+  box-shadow: 0 0 8px var(--gold-dash);
 }
 
 .h2-hero-title {
@@ -1981,8 +1989,8 @@ main { padding-block-start: 0; }
 
 .h2-hero-title em {
   font-style: italic;
-  color: var(--jewel-gold);
-  font-weight: 400;
+  color: var(--gold-text);
+  font-weight: 600;
 }
 
 .h2-hero-desc {
@@ -2176,11 +2184,11 @@ main { padding-block-start: 0; }
 
 .h2-sec-tag {
   font-family: var(--font-ui);
-  font-size: 0.68rem;
-  font-weight: 700;
+  font-size: 0.72rem;
+  font-weight: 750;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--jewel-gold);
+  color: var(--gold-text);
   display: block;
   margin-bottom: 0.75rem;
 }
@@ -2270,9 +2278,9 @@ main { padding-block-start: 0; }
 
 .h2-mat-origin {
   font-family: var(--font-ui);
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--jewel-gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold-text);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -2403,10 +2411,10 @@ main { padding-block-start: 0; }
 .h2-quote-author {
   font-family: var(--font-ui);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--jewel-gold);
+  color: var(--gold-text);
   margin-top: 0.75rem;
   display: block;
 }
@@ -2423,7 +2431,7 @@ main { padding-block-start: 0; }
   font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 700;
-  color: var(--jewel-gold);
+  color: var(--gold-text);
   line-height: 1;
   margin-bottom: 0.35rem;
 }
@@ -2532,8 +2540,8 @@ main { padding-block-start: 0; }
 .h2-arch-spec-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+  align-items: baseline;
+  gap: 0.75rem;
   font-size: 0.82rem;
   padding: 0.55rem 0;
   min-height: 2.5rem;
@@ -2549,6 +2557,7 @@ main { padding-block-start: 0; }
   flex-shrink: 0;
   font-weight: 500;
   font-size: 0.82rem;
+  white-space: nowrap;
 }
 
 .h2-spec-v {
@@ -2556,7 +2565,14 @@ main { padding-block-start: 0; }
   color: var(--c-text);
   text-align: right;
   font-size: 0.82rem;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-height: 1.35;
+}
+
+[dir="rtl"] .h2-spec-v {
+  text-align: left;
 }
 
 .h2-arch-link {
@@ -2565,16 +2581,16 @@ main { padding-block-start: 0; }
   gap: 0.5rem;
   font-family: var(--font-ui);
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--jewel-gold);
+  color: var(--gold-text);
   transition: gap 0.2s ease;
 }
 
 .h2-arch-link:hover {
   gap: 0.75rem;
-  color: #D9AB34;
+  color: var(--gold-dash);
 }
 
 /* SECTION 5: STUDIO APPRENTICESHIP & MASTERCLASSES */
@@ -2931,10 +2947,10 @@ main { padding-block-start: 0; }
   align-items: center;
   gap: 0.5rem;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--jewel-gold);
+  color: var(--gold-text);
   margin-bottom: 0.75rem;
 }
 
@@ -4308,10 +4324,10 @@ main { padding-block-start: 0; }
 
 .about-story-eyebrow {
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--jewel-gold);
+  color: var(--gold-text);
   margin-bottom: 0.75rem;
 }
 
@@ -4917,11 +4933,11 @@ main { padding-block-start: 0; }
 }
 
 .contact-dept-tag {
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--jewel-gold);
+  color: var(--gold-text);
   margin-bottom: 0.5rem;
 }
 
@@ -5436,7 +5452,7 @@ main { padding-block-start: 0; }
 }
 
 .h2-arch-title {
-  min-height: 2.2rem;
+  min-height: 3.5rem;
   display: flex;
   align-items: flex-start;
   margin-bottom: 0.75rem;
@@ -5444,7 +5460,7 @@ main { padding-block-start: 0; }
 
 .h2-arch-summary {
   flex: 1 1 auto;
-  min-height: 4.2rem;
+  min-height: 5.5rem;
   margin-bottom: 1.25rem;
   line-height: 1.6;
 }
@@ -5570,6 +5586,67 @@ p, span, li, a, label, input, textarea, select {
 .comm-stat-num {
   color: var(--jewel-gold) !important;
   font-weight: 700 !important;
+}
+
+/* ==============================================================
+   HIGH CONTRAST GOLD TEXT — BRIGHT IN LIGHT MODE, LUMINOUS IN DARK MODE
+   ============================================================== */
+.section-eyebrow,
+.section-eyebrow-center,
+.section-eyebrow-gold,
+.h2-sec-tag,
+.h2-sec-tag-gold,
+.prod-spotlight-eyebrow,
+.about-story-eyebrow,
+.contact-dept-tag,
+.craft-step-num,
+.h2-badge,
+.h2-mat-origin,
+.h2-quote-author,
+.h2-pstat-num,
+.h2-arch-link {
+  color: var(--gold-text) !important;
+}
+
+.section-eyebrow-dash,
+.h2-badge-dot {
+  background: var(--gold-dash) !important;
+}
+
+.section-manifesto .section-eyebrow,
+.section-commission-cta .section-eyebrow {
+  color: #FDE047 !important;
+  text-shadow: 0 0 12px rgba(253, 224, 71, 0.45) !important;
+}
+
+.section-manifesto .section-eyebrow-dash,
+.section-commission-cta .section-eyebrow-dash {
+  background: #FDE047 !important;
+  box-shadow: 0 0 8px rgba(253, 224, 71, 0.7) !important;
+}
+
+.dark .section-eyebrow,
+.dark .section-eyebrow-center,
+.dark .section-eyebrow-gold,
+.dark .h2-sec-tag,
+.dark .h2-sec-tag-gold,
+.dark .prod-spotlight-eyebrow,
+.dark .about-story-eyebrow,
+.dark .contact-dept-tag,
+.dark .craft-step-num,
+.dark .h2-badge,
+.dark .h2-mat-origin,
+.dark .h2-quote-author,
+.dark .h2-pstat-num,
+.dark .h2-arch-link {
+  color: #FDE047 !important;
+  text-shadow: 0 0 10px rgba(253, 224, 71, 0.45) !important;
+}
+
+.dark .section-eyebrow-dash,
+.dark .h2-badge-dot {
+  background: #FDE047 !important;
+  box-shadow: 0 0 8px rgba(253, 224, 71, 0.7) !important;
 }
 
 /* ==============================================================

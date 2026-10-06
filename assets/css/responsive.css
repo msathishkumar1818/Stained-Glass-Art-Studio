@@ -28,18 +28,58 @@
   }
 }
 
-/* ── Switch to mobile nav at ≤ 1380px (iPad Pro 13, Tablets & Touch Screens) ─── */
+/* ── iPad Pro 13, iPad Pro & Tablets (≤ 1380px) ─────────────── */
 @media (max-width: 1380px) {
   .desktop-nav { display: none !important; }
   .header-controls { display: none !important; }
   .mobile-toggle { display: flex !important; }
-}
 
-/* ── Footer: 2 columns at tablet ───────────────────────────── */
-@media (max-width: 1024px) {
+  /* Architectural Portfolio Cards: iPad Pro 13 layout & text alignment */
+  .h2-arch-grid {
+    gap: 1.25rem;
+  }
+  .h2-arch-body {
+    padding: 1.35rem 1.15rem;
+  }
+  .h2-arch-title {
+    font-size: 1.25rem;
+    min-height: 3.3rem;
+  }
+  .h2-arch-summary {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    min-height: 5.2rem;
+    margin-bottom: 1.1rem;
+  }
+  .h2-arch-specs-list {
+    padding: 0.75rem 0.85rem;
+    margin-bottom: 1.15rem;
+  }
+  .h2-arch-spec-item {
+    gap: 0.5rem;
+    min-height: 2.35rem;
+    align-items: baseline;
+  }
+  .h2-spec-k {
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+  .h2-spec-v {
+    font-size: 0.8rem;
+    line-height: 1.35;
+    text-align: right;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  [dir="rtl"] .h2-spec-v {
+    text-align: left;
+  }
+
+  /* Footer: 2 columns (2x2 grid) on iPad Pro 13, iPad Pro & Tablets */
   .footer-body {
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem 2rem;
+    gap: 2.5rem 2.5rem;
     padding: 3.5rem 1.5rem 1.5rem;
   }
 }
@@ -73,7 +113,6 @@
   .h2-materials-grid { grid-template-columns: repeat(2, 1fr); }
   .h2-prov-grid { grid-template-columns: 1fr; gap: 3.5rem; }
   .h2-prov-image-box { max-width: 480px; margin: 0 auto; }
-  .h2-arch-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .h2-workshops-grid { grid-template-columns: 1fr; gap: 3.5rem; }
   .h2-wshop-media { max-width: 480px; margin: 0 auto; }
   .h2-consult-box { grid-template-columns: 1fr; }
@@ -85,6 +124,9 @@
 /* ── 768px — tablet portrait ───────────────────────────────── */
 @media (max-width: 768px) {
   .header-inner { gap: 1rem; }
+
+  /* Home 2 */
+  .h2-arch-grid { grid-template-columns: 1fr; gap: 2.5rem; }
 
   /* Home 1 */
   .gallery-mosaic {
