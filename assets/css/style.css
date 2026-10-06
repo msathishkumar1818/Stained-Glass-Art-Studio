@@ -395,9 +395,74 @@ ul, ol { list-style: none; }
 .badge-sapphire { background: rgba(26,68,114,0.15); }
 .badge-gold { background: rgba(196,154,42,0.13); }
 .badge-gold-active { background: rgba(196,154,42,0.25); }
-.dropdown-item-current { background: rgba(196,154,42,0.08); }
-.dropdown-item-current .dropdown-item-title { color: #8C4A00; }
-.dark .dropdown-item-current .dropdown-item-title { color: #FDE047; }
+
+.dropdown-item-current,
+.dropdown-item.active {
+  background: rgba(196, 154, 42, 0.12);
+  border: 1px solid rgba(196, 154, 42, 0.3);
+}
+
+.dropdown-item-current .dropdown-item-title,
+.dropdown-item.active .dropdown-item-title {
+  color: #8C4A00;
+  font-weight: 750;
+}
+
+.dropdown-item-current .dropdown-item-desc,
+.dropdown-item.active .dropdown-item-desc {
+  color: var(--c-text);
+  font-weight: 500;
+}
+
+.dropdown-item-current .badge-sapphire,
+.dropdown-item.active .badge-sapphire {
+  background: rgba(26, 68, 114, 0.25);
+  border: 1px solid rgba(26, 68, 114, 0.35);
+}
+
+.dropdown-item-current .badge-gold,
+.dropdown-item.active .badge-gold,
+.dropdown-item-current .badge-gold-active,
+.dropdown-item.active .badge-gold-active {
+  background: rgba(196, 154, 42, 0.28);
+  border: 1px solid rgba(196, 154, 42, 0.38);
+}
+
+.dropdown-item-current::after,
+.dropdown-item.active::after {
+  content: '';
+  margin-inline-start: auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #C47F00;
+  box-shadow: 0 0 8px rgba(196, 127, 0, 0.6);
+  flex-shrink: 0;
+}
+
+.dark .dropdown-item-current,
+.dark .dropdown-item.active {
+  background: rgba(245, 200, 66, 0.14);
+  border: 1px solid rgba(245, 200, 66, 0.38);
+}
+
+.dark .dropdown-item-current .dropdown-item-title,
+.dark .dropdown-item.active .dropdown-item-title {
+  color: #FDE047;
+  text-shadow: 0 0 10px rgba(253, 224, 71, 0.45);
+}
+
+.dark .dropdown-item-current .dropdown-item-desc,
+.dark .dropdown-item.active .dropdown-item-desc {
+  color: #E2E8F0;
+}
+
+.dark .dropdown-item-current::after,
+.dark .dropdown-item.active::after {
+  background: #FDE047;
+  box-shadow: 0 0 10px rgba(253, 224, 71, 0.8);
+}
+
 .dot-sapphire { background: #1A4472; }
 .dot-gold { background: #C49A2A; }
 .logo-svg { width: 34px; height: 34px; flex-shrink: 0; }
@@ -721,6 +786,17 @@ ul, ol { list-style: none; }
 }
 
 .mobile-sub-link:hover { color: var(--jewel-gold); background: var(--c-bg3); }
+
+.mobile-sub-link.active {
+  color: #8C4A00;
+  font-weight: 750;
+  background: rgba(196, 154, 42, 0.12);
+}
+
+.dark .mobile-sub-link.active {
+  color: #FDE047;
+  background: rgba(245, 200, 66, 0.12);
+}
 
 .mobile-sub-dot {
   width: 7px;

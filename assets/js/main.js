@@ -258,7 +258,8 @@
 
   /* ── Active Navigation ─────────────────────────────────────── */
   function initActiveNav() {
-    const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const rawPage = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const page = rawPage === '' || rawPage === '/' ? 'index.html' : rawPage;
 
     const map = {
       'index.html':       'home',
@@ -270,8 +271,44 @@
       'contact.html':     'contact',
     };
 
-    const active = map[page] || 'home';
-    qsa(`[data-page="${active}"]`).forEach(el => el.classList.add('active'));
+    const active = map[page] || (page.includes('home-2') ? 'home' : (page.includes('index') || !page.includes('.html') ? 'home' : ''));
+    if (active) {
+      qsa(`[data-page="${active}"]`).forEach(el => el.classList.add('active'));
+    }
+
+    // Home Dropdown & Mobile Menu Highlight (Home 1 vs Home 2)
+    const isHome2 = page === 'home-2.html' || page.includes('home-2');
+    const isHome1 = !isHome2 && (page === 'index.html' || page === '' || page.endsWith('/') || (!page.includes('.html') && active === 'home'));
+
+    // Desktop Dropdown Items
+    qsa('#home-dropdown-panel .dropdown-item').forEach(item => {
+      const href = (item.getAttribute('href') || '').toLowerCase();
+      const isH1 = href.includes('index.html');
+      const isH2 = href.includes('home-2.html');
+
+      item.classList.remove('dropdown-item-current', 'active');
+
+      if (isHome1 && isH1) {
+        item.classList.add('dropdown-item-current', 'active');
+      } else if (isHome2 && isH2) {
+        item.classList.add('dropdown-item-current', 'active');
+      }
+    });
+
+    // Mobile Drawer Sub-links
+    qsa('#mobile-home-panel .mobile-sub-link').forEach(link => {
+      const href = (link.getAttribute('href') || '').toLowerCase();
+      const isH1 = href.includes('index.html');
+      const isH2 = href.includes('home-2.html');
+
+      link.classList.remove('active');
+
+      if (isHome1 && isH1) {
+        link.classList.add('active');
+      } else if (isHome2 && isH2) {
+        link.classList.add('active');
+      }
+    });
   }
 
   /* ── Header Scroll ─────────────────────────────────────────── */
