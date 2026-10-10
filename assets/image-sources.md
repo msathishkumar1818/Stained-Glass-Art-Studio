@@ -66,3 +66,15 @@ assets/images/testimonials/  — Client portraits (if used)
 | sections/classes-teaching.jpg | Home 2 | Section 5: Apprenticeship & Classes | Unsplash | https://unsplash.com/photos/1524178232363-1fb2b075b655 | Unsplash License | Not required | ✓ | 2026-09-15 |
 | sections/studio-edinburgh.jpg | Home 2 | Section 6: Old Town Consultation | Unsplash | https://unsplash.com/photos/1560518883-ce09059eeffa | Unsplash License | Not required | ✓ | 2026-09-15 |
 
+---
+
+## Products (products.html) — Staged 2026-10-10
+
+| Filename | Page | Section | Source | Original URL | License | Attribution | Commercial | Date |
+|----------|------|---------|--------|--------------|---------|-------------|------------|------|
+| hero/prod-hero-bg.jpg | Products | Section 1: Catalog Hero | Studio Atelier Showcase (AI Artisan Capture) | Local Staged Asset | Studio Proprietary License | Not required | ✓ | 2026-10-10 |
+| hero/comm-hero-bg.jpg | Commissions | Section 1: Atelier Hero | Bespoke Architectural Glass Installation | Local Staged Asset | Studio Proprietary License | Not required | ✓ | 2026-10-10 |
+| hero/class-hero-bg.jpg | Classes | Section 1: Workshop Hero | Edinburgh Glass Academy Atelier | Local Staged Asset | Studio Proprietary License | Not required | ✓ | 2026-10-10 |
+| hero/about-hero-bg.jpg | About | Section 1: Heritage Hero | 40-Year Heritage Studio & Archives | Local Staged Asset | Studio Proprietary License | Not required | ✓ | 2026-10-10 |
+| hero/contact-hero-bg.jpg | Contact | Section 1: Contact Hero | Royal Mile Edinburgh Atelier Exterior | Local Staged Asset | Studio Proprietary License | Not required | ✓ | 2026-10-10 |
+| hero/h2-hero-bg.jpg | Home 2 | Section 1: Asymmetrical Hero | Morning Sun Light Through Cathedral Glass | Local Staged Asset | Studio Proprietary License | Not required | ✓ | 2026-10-10 |
